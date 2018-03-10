@@ -3,7 +3,8 @@
   "version": "0.0.1",
   "dependencies": {
     "jquery": "~3.1.1",
-    "normalize.css": "~5.0.0"
+    "normalize.css": "~5.0.0",
+    "plotly.js": "^1.35.2"
   },
   "devDependencies": {
     "babelify": "~7.3.0",

@@ -14,8 +14,19 @@
 
 {% block content %}
 
-<section>
+<h3>A South L.A. neighborhood stands apart</h3>
+<p>Harvard Park's 2016 homicide total was its highest in at least 15 years despite a downward trend in killings across L.A. County.</p>
 
+<!-- our charts go here -->
+<div class = "charts-holder clearfix">
+  <div class = "inline-chart" id="county-homicides"></div>
+  <div class = "inline-chart" id="harvard-park-homicides"></div>
+</div>
+
+
+
+<section>
+<!-- the cards go here -->
 <h3> lives lost </h3>
 <p>The {{ site.data.harvard_park_homicides|length }} homicides in Harvard Park since 2000 were primarily black and Latino males, but the list includes husbands, wives, fathers, mothers of all ages, and even some small children.</p>
 
@@ -36,4 +47,12 @@
 {% endfor %}
 </div>
 </section>
+{% endblock %}
+
+{% block scripts %}
+<script>
+
+var annualTotals = {% include "_data/annual_totals.json" %}
+
+</script>
 {% endblock %}
